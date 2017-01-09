@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>水榭清松-Song Kong</title>
+    <description>This is Song' home.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 09 Jan 2017 21:36:03 +0900</pubDate>
+    <lastBuildDate>Mon, 09 Jan 2017 21:36:03 +0900</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>CSS란?</title>
+        <description>&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;요약&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;웹 문서의 전반적인 스타일을 미리 저장해 둔 스타일시트이다. 문서 전체의 일관성을 유지할 수 있고, 세세한 스타일 지정의 필요를 줄어들게 하였다.
+기존의 HTML은 웹 문서를 다양하게 설계하고 수시로 변경하는데 많은 제약이 따르는데, 이를 보완하기 위해 만들어진 것이 스타일 시트이고 스타일 시트의 표준안이 바로 CSS이다. 간단히 스타일 시트라고도 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;본문&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;HTML을 이용해서 웹 페이지를 제작할 경우 전반적인 틀에서 세세한 글꼴 하나 하나를 일일이 지정해주어야 하지만, 웹 페이지의 스타일(작성형식)을 미리 저장해 두면 웹 페이지의 한 가지 요소만 변경해도 관련되는 전체 페이지의 내용이 한꺼번에 변경되므로, 문서 전체의 일관성을 유지할 수 있고 작업 시간도 단축된다.&lt;/p&gt;
+
+&lt;p&gt;따라서 웹 개발자들은 보다 풍부한 디자인으로 웹을 설계할 수 있고, 글자의 크기, 글자체, 줄간격, 배경 색상, 배열위치 등을 자유롭게 선택하거나 변경할 수 있으며 유지·보수도 간편하게 할 수 있다.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 24 Dec 2016 23:12:30 +0900</pubDate>
+        <link>http://localhost:4000/blog/css/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/css/</guid>
+        
+        <category>front-end</category>
+        
+        <category>CSS</category>
+        
+        <category>computer</category>
+        
+        
+        <category>Front-end</category>
+        
+      </item>
+    
+      <item>
+        <title>database란?</title>
+        <description>&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;1) 데이터베이스의 개념 및 정의&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;기존의 파일시스템에서는 중복된 정보를 효율적으로 처리하는 것이 관점 연구 분야였다. 이 중복을 피하여 정보를 일원화(一元化)하여 처리를 효율적으로 수행하기 위해서 서로 관련성을 가지며 중복이 없는 데이터의 집합을 유지하는 것을 데이터베이스(－, database)라고 한다. 그리고 데이터베이스를 관리하는 시스템을 데이터베이스 관리시스템(DBMS: Database Management System)이라 한다. 데이터베이스의 대표적인 구조는 트리구조(tree structure)인 구조적 데이터베이스 외에 관계형 데이터베이스(relational database)와 객체지향 데이터베이스 구조로 대별한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;2) 데이터베이스의 구성&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;데이터베이스는 특정 조직의 업무를 수행하는 데 필요한 상호 관련된 데이터들의 모임으로, 최소의 중복으로 통합(integrated), 저장(stored)된 운영(operation) 데이터로 구성된다.&lt;/p&gt;
+
+&lt;p&gt;(1) 통합 데이터(integrated data)&lt;/p&gt;
+
+&lt;p&gt;중복을 배제하나, 경우에 따라 불가피하게 중복을 허용하는 데이터다. 이러한 의도적 중복은 항상 파악하여 관리할 수 있으며, 이러한 것을 최소의 중복 또는 통제된 중복이라고 한다.&lt;/p&gt;
+
+&lt;p&gt;(2) 저장 데이터(stored data)&lt;/p&gt;
+
+&lt;p&gt;컴퓨터의 저장매체에 저장하여 관리하는 데이터를 의미한다.&lt;/p&gt;
+
+&lt;p&gt;(3) 운영 데이터(operation data)&lt;/p&gt;
+
+&lt;p&gt;단순한 데이터의 집합이 아니라 그 조직의 기능을 수행하는 데 없어서는 안 될 필수의 데이터를 의미한다.&lt;/p&gt;
+
+&lt;p&gt;(4) 공용 데이터(shared data)&lt;/p&gt;
+
+&lt;p&gt;어느 하나의 응용프로그램이나 응용시스템을 위한 데이터가 아니라, 그 조직의 여러 사용자와 여러 응용시스템들이 서로 다른 목적으로 데이터를 공동으로 이용할 수 있게 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;3) 데이터베이스의 특징&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;① 실시간 접근성(real time accessibility): 사용자의 질의에 대하여 즉시 처리하여 응답하는 특징을 갖는다.&lt;/p&gt;
+
+&lt;p&gt;② 계속적인 진화(continuous evolution): 삽입, 삭제, 갱신을 통하여 항상 최근의 정확한 데이터를 동적으로 유지하는 특징이 있다.&lt;/p&gt;
+
+&lt;p&gt;③ 동시 공유(concurrent sharing): 여러 사용자가 동시에 원하는 데이터를 공유할 수 있는 특징을 갖는다.&lt;/p&gt;
+
+&lt;p&gt;④ 내용에 의한 참조(content reference): 데이터베이스에 있는 데이터를 참조할 때 투플(tuple)의 주소나 위치가 아닌 사용자가 요구하는 데이터 내용에 따라 참조하는 특징을 갖는다.&lt;/p&gt;
+
+&lt;p&gt;⑤ 데이터 논리적 독립성(independence): 응용프로그램과 데이터베이스를 독립시킴으로써 데이터의 논리적 구조를 변경시키더라도 응용프로그램은 변경되지 않는 특징을 갖는다.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 03 Oct 2016 16:52:30 +0900</pubDate>
+        <link>http://localhost:4000/blog/database/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/database/</guid>
+        
+        <category>batabase</category>
+        
+        <category>db</category>
+        
+        <category>back-end</category>
+        
+        <category>computer</category>
+        
+        
+        <category>Back-end</category>
+        
+      </item>
+    
+      <item>
+        <title>javascript란?</title>
+        <description>&lt;p&gt;HTML 문서의 정적이고 단조로운 한계를 극복하기 위해 넷스케이프(Netscape)사가 만든 livescript가 그 이름을 달리 한 것으로서 브라우저 자체에 내장된 해석기능을 이용한 클라이언트(client) 기반의 일종의 스크립트 언어이다. 작고도 빠르기 때문에 웹문서를 동적으로 꾸밀 때 가장 널리 쓰인다.
+[네이버 지식백과] 자바스크립트 [JAVA script] (NEW 경제용어사전, 2006. 4. 7., 미래와경영)&lt;/p&gt;
+</description>
+        <pubDate>Thu, 15 Sep 2016 14:40:30 +0900</pubDate>
+        <link>http://localhost:4000/blog/javascript/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/javascript/</guid>
+        
+        <category>computer</category>
+        
+        <category>front-end</category>
+        
+        <category>javascript</category>
+        
+        
+        <category>Front-end</category>
+        
+      </item>
+    
+      <item>
+        <title>작성 Test</title>
+        <description>&lt;p&gt;첫번째 Posting Test&lt;/p&gt;
+</description>
+        <pubDate>Wed, 31 Aug 2016 22:58:30 +0900</pubDate>
+        <link>http://localhost:4000/blog/first_post/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/first_post/</guid>
+        
+        <category>방명록</category>
+        
+        
+        <category>Life</category>
+        
+      </item>
+    
+  </channel>
+</rss>
