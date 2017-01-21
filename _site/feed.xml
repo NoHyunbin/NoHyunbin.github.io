@@ -5,9 +5,124 @@
     <description>This is Song' home.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 14 Jan 2017 17:13:01 +0900</pubDate>
-    <lastBuildDate>Sat, 14 Jan 2017 17:13:01 +0900</lastBuildDate>
+    <pubDate>Sat, 21 Jan 2017 19:35:57 +0900</pubDate>
+    <lastBuildDate>Sat, 21 Jan 2017 19:35:57 +0900</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Test Driven Development</title>
+        <description>&lt;h1&gt; TDD(Test Driven Development)란? &lt;/h1&gt;
+&lt;blockquote&gt;
+	&lt;p&gt;&quot;테스트 주도 개발&quot;&lt;/p&gt;
+	&lt;p&gt;&quot; Test the program before you write it - Kent Beck &quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;켄트 벡은 TDD를 소개한 책에서 “프로그램을 작성하기 전에 테스트를 먼저 작성하는 것”이라고 테스트 주도 개발을 정의했다. 프로그램도 작성하지 않았는데 테스트를 먼저 하는 것이 이상할 수도 있다.
+TDD는 “업무 코드를 작성하기 전에 테스트 코드를 먼저 만드는 것”으로 정의되기도 한다. 코드를 검증하는 테스트 코드를 먼저 만든 다음에 실제 작성해야 하는 프로그램 코드작성을 하라는 뜻이다. 최초에는 테스트 우선개발(Test First Development)라고 불렸으나, 지금은 테스트 주도개발(Test Driven Development, TDD)라고 부른다.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1&gt; JUnit &lt;/h1&gt;
+&lt;p&gt;JUnit은 하나의 메소드 단위에서 그 메소드가 정상적으로 실행되는지를 확인하는, 즉 단위 테스트를 쉽게 할 수 있도록 도와주는 framework이다. 아래의 메소드들을 사용해서 테스트를 할 수 있다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;
+	&lt;pre&gt;
+	&lt;span class=&quot;na&quot;&gt;assertTrue&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;(a)&lt;/span&gt;&lt;span style=&quot;color:black&quot;&gt; : a가 true인지 확인&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;assertSame&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;(a, b)&lt;/span&gt;&lt;span style=&quot;color:black&quot;&gt; : a와 b가 같은 객체인지 확인&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;assertNotNull&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;(a)&lt;/span&gt;&lt;span style=&quot;color:black&quot;&gt; : a가 null이 아님을 확인&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;assertEquals&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;(a, b)&lt;/span&gt;&lt;span style=&quot;color:black&quot;&gt; : a와 b의 값이 같은지 확인&lt;/span&gt;
+	&lt;span class=&quot;na&quot;&gt;assertArrayEquals&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;(a, b)&lt;/span&gt;&lt;span style=&quot;color:black&quot;&gt; : 배열 a와 b가 일치하는지 확인&lt;/span&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h4&gt; JUnit을 사용해 보면서 생긴 문제와 해결들 &lt;/h4&gt;
+
+&lt;p&gt;처음 JUnit을 사용해할 때, 계속 실행이 되지 않아서 오랜 시간을 투자했던 부분이다. ( 딱 3줄을 추가… 함으로써 문제는 해결되었다 )&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;
+	&lt;pre&gt;
+	&lt;span style=&quot;color:black&quot;&gt;1. &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@Runwith&lt;/span&gt;&lt;span style=&quot;color:black&quot;&gt;(SpringJUnit4ClassRunner.class)&lt;/span&gt;
+	&lt;span style=&quot;color:black&quot;&gt;2. &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@WebAppConfiguration&lt;/span&gt;
+	&lt;span style=&quot;color:black&quot;&gt;3. &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@ContextConfiguration&lt;/span&gt;&lt;span style=&quot;color:black&quot;&gt;(locations=&quot;file:src/main/webapp/WEB-INF/spring/appServlet/&lt;br /&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;servlet-context.xml&quot;)&lt;/span&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;@Runwith는 JUnit 프레임워크의 테스트 실행 방법을 확장할 때 사용하는 애노테이션이다. SpringJUnit4ClassRunner라는 JUnit용 테스트 컨텍스트 프레임워크 확장 클래스를 지정해주면 JUnit이 테스트를 진행하는 중에 테스트가 사용할 애플리케이션 컨텍스트를 만들과 관리하는 작업을 진행해준다.&lt;/p&gt;
+
+&lt;p&gt;@WebAppConfiguration는 ApplicationContext가  WebApplicationContext여야만 하는 통합 테스트를 위해 로드될 때 붙이는 어노테이션이다.&lt;/p&gt;
+
+&lt;p&gt;@ContextConfiguration은 자동으로 만들어줄 Application Context의 설정파일 위치를 지정하는 것이다.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;출처 : Spring docs&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;a href=”http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/test/context/web/WebAppConfiguration.html&amp;lt;/a&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;출처 : [배워서 남주자]&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;a href=”http://countryxide.tistory.com/17&amp;lt;/a&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;출처 : NAVER CAFE &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;a href=”http://cafe.naver.com/buldon/4934&amp;lt;/a&amp;gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 21 Jan 2017 17:04:10 +0900</pubDate>
+        <link>http://localhost:4000/blog/test/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/test/</guid>
+        
+        <category>test</category>
+        
+        <category>JUnit</category>
+        
+        <category>version</category>
+        
+        <category>computer</category>
+        
+        <category>back-end</category>
+        
+        <category>TDD</category>
+        
+        
+        <category>Back-end</category>
+        
+      </item>
+    
+      <item>
+        <title>기술교육 2주차 주말 Diary</title>
+        <description>&lt;p&gt;2017.01.16. Mon : 프로젝트 기획 발 ! 표 !&lt;/p&gt;
+
+&lt;p&gt;2017.01.17. Tue : Git 교육, 루키햇님TF 회식&lt;/p&gt;
+
+&lt;p&gt;2017.01.18. Wed : 프로젝트 환경설정, DB설계&lt;/p&gt;
+
+&lt;p&gt;2017.01.19. Thur : HTML/CSS 강의, MemberDao, Dto 설계&lt;/p&gt;
+
+&lt;p&gt;2017.01.20. Fri : MemberService, serviceTest 작성&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;이번 한 주도 많은 일이 있었고, 많은 야근도 있었고… &lt;br /&gt;
+일단 먼저 가장 큰 이슈였던, 걱정하던 발표를 했다 &lt;br /&gt;
+내 모습을 보고자, 잘한건 기억하고, 부족한건 고치고자, &lt;br /&gt;
+영상도 찍어놓고 봤는데, 나름 준비한 만큼(?) 혹은 좀 더 잘 &lt;br /&gt;
+선방은 한 것 같아 다행이다.&lt;/p&gt;
+
+&lt;p&gt;화요일엔 멘토님과 “계절밥상”에서 회식도했다 &lt;br /&gt;
+밥도 맛있었고, 분위기도 좋았고, 함께있던 사람들도….&lt;/p&gt;
+
+&lt;p&gt;Git 강의와 HTML 강의도 있었는데 유익한 시간이었고, 많이 배웠다 &lt;br /&gt;
+시기 적절하게 프로젝트도 시작되면서 배운 것들을 사용할 수 있었다&lt;/p&gt;
+
+&lt;p&gt;이번주엔 기능 구현을 시작했고, 쉽지는 않지만 잘 진행되고 있는 것 같다 &lt;br /&gt;
+일단 이번주에 계획한 부분까지 잘 마친 것 같고, 부지런하게 잘 하고 있다&lt;br /&gt;
+열심히 해서 좋은 완성품이 나오길…☆&lt;/p&gt;
+</description>
+        <pubDate>Sat, 21 Jan 2017 15:04:10 +0900</pubDate>
+        <link>http://localhost:4000/blog/diary/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/diary/</guid>
+        
+        <category>Diary</category>
+        
+        
+        <category>Diary</category>
+        
+      </item>
     
       <item>
         <title>입사한 지 2주가 지난 지금</title>
@@ -37,7 +152,7 @@
         <category>Diary</category>
         
         
-        <category>Front-end</category>
+        <category>Diary</category>
         
       </item>
     

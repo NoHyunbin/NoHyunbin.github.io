@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hyunbin's Blog</title>
-  <meta name="description" content="This is Song' home.">
+  <meta name="description" content="JUnit test">
 
   <link rel="stylesheet" href="/assets/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="http://localhost:4000/tags">
+  <link rel="canonical" href="http://localhost:4000/blog/test/">
   <link rel="alternate" type="application/rss+xml" title="水榭清松-Song Kong" href="http://localhost:4000/feed.xml">
   <script src="/assets/js/jquery.min.js" | prepend: site.baseurl }}"></script>
   <script src="/assets/js/js.js" | prepend: site.baseurl }}"></script>
@@ -89,162 +89,98 @@
 </section>
 
 	<section style="padding-bottom: 0">
-	<article class="wrapper">
-		<div class="post-header">
-			<h2 class="blue-title text-center">Tag Archive</h2>
-			<div class="line-highlight"><i class="fa fa-paw" aria-hidden="true"></i></div>
-		</div>
-		<div class="post-content">
+		<article class="wrapper">
+			<div class="post-header">
+			<h2 class="red-title" >Test Driven Development</h2>
+			<ul class="tags">
+				
+				<li><a href="/tags#test">test</a></li>
+				
+				
+				<li><a href="/tags#JUnit">JUnit</a></li>
+				
+				
+				<li><a href="/tags#version">version</a></li>
+				
+				
+				<li><a href="/tags#computer">computer</a></li>
+				
+				
+				<li><a href="/tags#back-end">back-end</a></li>
+				
+				
+				<li><a href="/tags#TDD">TDD</a></li>
+				
+				
+			</ul>
+			<div class="line-highlight">21 Jan 2017</div>
+			</div>
+			<div class="post-content">
+				<h1> TDD(Test Driven Development)란? </h1>
+<blockquote>
+	<p>"테스트 주도 개발"</p>
+	<p>" Test the program before you write it - Kent Beck "</p>
+</blockquote>
+
+<p>켄트 벡은 TDD를 소개한 책에서 “프로그램을 작성하기 전에 테스트를 먼저 작성하는 것”이라고 테스트 주도 개발을 정의했다. 프로그램도 작성하지 않았는데 테스트를 먼저 하는 것이 이상할 수도 있다.
+TDD는 “업무 코드를 작성하기 전에 테스트 코드를 먼저 만드는 것”으로 정의되기도 한다. 코드를 검증하는 테스트 코드를 먼저 만든 다음에 실제 작성해야 하는 프로그램 코드작성을 하라는 뜻이다. 최초에는 테스트 우선개발(Test First Development)라고 불렸으나, 지금은 테스트 주도개발(Test Driven Development, TDD)라고 부른다.</p>
+
+<p><br /></p>
+<h1> JUnit </h1>
+<p>JUnit은 하나의 메소드 단위에서 그 메소드가 정상적으로 실행되는지를 확인하는, 즉 단위 테스트를 쉽게 할 수 있도록 도와주는 framework이다. 아래의 메소드들을 사용해서 테스트를 할 수 있다.</p>
+
+<figure class="highlight">
+	<pre>
+	<span class="na">assertTrue</span><span class="nt">(a)</span><span style="color:black"> : a가 true인지 확인</span>
+	<span class="na">assertSame</span><span class="nt">(a, b)</span><span style="color:black"> : a와 b가 같은 객체인지 확인</span>
+	<span class="na">assertNotNull</span><span class="nt">(a)</span><span style="color:black"> : a가 null이 아님을 확인</span>
+	<span class="na">assertEquals</span><span class="nt">(a, b)</span><span style="color:black"> : a와 b의 값이 같은지 확인</span>
+	<span class="na">assertArrayEquals</span><span class="nt">(a, b)</span><span style="color:black"> : 배열 a와 b가 일치하는지 확인</span></pre></figure>
+
+<p><br /></p>
+<h4> JUnit을 사용해 보면서 생긴 문제와 해결들 </h4>
+
+<p>처음 JUnit을 사용해할 때, 계속 실행이 되지 않아서 오랜 시간을 투자했던 부분이다. ( 딱 3줄을 추가… 함으로써 문제는 해결되었다 )</p>
+<figure class="highlight">
+	<pre>
+	<span style="color:black">1. </span><span class="s">@Runwith</span><span style="color:black">(SpringJUnit4ClassRunner.class)</span>
+	<span style="color:black">2. </span><span class="s">@WebAppConfiguration</span>
+	<span style="color:black">3. </span><span class="s">@ContextConfiguration</span><span style="color:black">(locations="file:src/main/webapp/WEB-INF/spring/appServlet/<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;servlet-context.xml")</span></pre></figure>
+
+<p>@Runwith는 JUnit 프레임워크의 테스트 실행 방법을 확장할 때 사용하는 애노테이션이다. SpringJUnit4ClassRunner라는 JUnit용 테스트 컨텍스트 프레임워크 확장 클래스를 지정해주면 JUnit이 테스트를 진행하는 중에 테스트가 사용할 애플리케이션 컨텍스트를 만들과 관리하는 작업을 진행해준다.</p>
+
+<p>@WebAppConfiguration는 ApplicationContext가  WebApplicationContext여야만 하는 통합 테스트를 위해 로드될 때 붙이는 어노테이션이다.</p>
+
+<p>@ContextConfiguration은 자동으로 만들어줄 Application Context의 설정파일 위치를 지정하는 것이다.<br /><br /></p>
+
+<hr />
+
+<p>출처 : Spring docs<br /></p>
+
+<p>&lt;a href=”http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/test/context/web/WebAppConfiguration.html&lt;/a&gt;</p>
+
+<p>출처 : [배워서 남주자]<br /></p>
+
+<p>&lt;a href=”http://countryxide.tistory.com/17&lt;/a&gt;</p>
+
+<p>출처 : NAVER CAFE <br /></p>
+
+<p>&lt;a href=”http://cafe.naver.com/buldon/4934&lt;/a&gt;</p>
+
+			</div>
 			
-<ul class="entry-meta">
+<div class="post-pagination text-center">
+  
+  <a href="#" class="btn-pagination disabled">Next</a>
   
   
-  <li><a href="#CSS" class="tag"><span class="term">CSS</span><span class="count">1</span></a></li>
+  <a href="/blog/diary/" class="btn-pagination" title="기술교육 2주차 주말 Diary
+">Previous</a>
   
-  
-  <li><a href="#Diary" class="tag"><span class="term">Diary</span><span class="count">2</span></a></li>
-  
-  
-  <li><a href="#JUnit" class="tag"><span class="term">JUnit</span><span class="count">1</span></a></li>
-  
-  
-  <li><a href="#TDD" class="tag"><span class="term">TDD</span><span class="count">1</span></a></li>
-  
-  
-  <li><a href="#back-end" class="tag"><span class="term">back-end</span><span class="count">2</span></a></li>
-  
-  
-  <li><a href="#batabase" class="tag"><span class="term">batabase</span><span class="count">1</span></a></li>
-  
-  
-  <li><a href="#computer" class="tag"><span class="term">computer</span><span class="count">4</span></a></li>
-  
-  
-  <li><a href="#db" class="tag"><span class="term">db</span><span class="count">1</span></a></li>
-  
-  
-  <li><a href="#front-end" class="tag"><span class="term">front-end</span><span class="count">2</span></a></li>
-  
-  
-  <li><a href="#javascript" class="tag"><span class="term">javascript</span><span class="count">1</span></a></li>
-  
-  
-  <li><a href="#test" class="tag"><span class="term">test</span><span class="count">1</span></a></li>
-  
-  
-  <li><a href="#version" class="tag"><span class="term">version</span><span class="count">1</span></a></li>
-  
-  
-  <li><a href="#방명록" class="tag"><span class="term">방명록</span><span class="count">1</span></a></li>
-  
-</ul>
+</div>
 
-<h3 id="CSS" class="red-title">CSS</h3>
-<ul>
-    
-    <li class="entry-title"><a href="/blog/css/" title="CSS란?">CSS란?</a></li>
-    
-  </ul>
-
-<h3 id="Diary" class="red-title">Diary</h3>
-<ul>
-    
-    <li class="entry-title"><a href="/blog/diary/" title="기술교육 2주차 주말 Diary">기술교육 2주차 주말 Diary</a></li>
-    
-    <li class="entry-title"><a href="/blog/diary/" title="입사한 지 2주가 지난 지금">입사한 지 2주가 지난 지금</a></li>
-    
-  </ul>
-
-<h3 id="JUnit" class="red-title">JUnit</h3>
-<ul>
-    
-    <li class="entry-title"><a href="/blog/test/" title="Test Driven Development">Test Driven Development</a></li>
-    
-  </ul>
-
-<h3 id="TDD" class="red-title">TDD</h3>
-<ul>
-    
-    <li class="entry-title"><a href="/blog/test/" title="Test Driven Development">Test Driven Development</a></li>
-    
-  </ul>
-
-<h3 id="back-end" class="red-title">back-end</h3>
-<ul>
-    
-    <li class="entry-title"><a href="/blog/test/" title="Test Driven Development">Test Driven Development</a></li>
-    
-    <li class="entry-title"><a href="/blog/database/" title="database란?">database란?</a></li>
-    
-  </ul>
-
-<h3 id="batabase" class="red-title">batabase</h3>
-<ul>
-    
-    <li class="entry-title"><a href="/blog/database/" title="database란?">database란?</a></li>
-    
-  </ul>
-
-<h3 id="computer" class="red-title">computer</h3>
-<ul>
-    
-    <li class="entry-title"><a href="/blog/test/" title="Test Driven Development">Test Driven Development</a></li>
-    
-    <li class="entry-title"><a href="/blog/css/" title="CSS란?">CSS란?</a></li>
-    
-    <li class="entry-title"><a href="/blog/database/" title="database란?">database란?</a></li>
-    
-    <li class="entry-title"><a href="/blog/javascript/" title="javascript란?">javascript란?</a></li>
-    
-  </ul>
-
-<h3 id="db" class="red-title">db</h3>
-<ul>
-    
-    <li class="entry-title"><a href="/blog/database/" title="database란?">database란?</a></li>
-    
-  </ul>
-
-<h3 id="front-end" class="red-title">front-end</h3>
-<ul>
-    
-    <li class="entry-title"><a href="/blog/css/" title="CSS란?">CSS란?</a></li>
-    
-    <li class="entry-title"><a href="/blog/javascript/" title="javascript란?">javascript란?</a></li>
-    
-  </ul>
-
-<h3 id="javascript" class="red-title">javascript</h3>
-<ul>
-    
-    <li class="entry-title"><a href="/blog/javascript/" title="javascript란?">javascript란?</a></li>
-    
-  </ul>
-
-<h3 id="test" class="red-title">test</h3>
-<ul>
-    
-    <li class="entry-title"><a href="/blog/test/" title="Test Driven Development">Test Driven Development</a></li>
-    
-  </ul>
-
-<h3 id="version" class="red-title">version</h3>
-<ul>
-    
-    <li class="entry-title"><a href="/blog/test/" title="Test Driven Development">Test Driven Development</a></li>
-    
-  </ul>
-
-<h3 id="방명록" class="red-title">방명록</h3>
-<ul>
-    
-    <li class="entry-title"><a href="/blog/first_post/" title="작성 Test">작성 Test</a></li>
-    
-  </ul>
-
-		</div>
-		
-	</article>
+			
+		</article>
 	</section>
 	<section id="comments">
     <div class="wrapper">
@@ -294,9 +230,7 @@
     <a href=" #header "><i class="fa fa-paw" aria-hidden="true"></i></a>
   </div>
 </footer>
-
 </div>
-
 
 </body>
 </html>
