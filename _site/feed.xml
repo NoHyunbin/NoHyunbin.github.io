@@ -5,8 +5,8 @@
     <description>This is Song' home.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 23 Jan 2017 10:26:00 +0900</pubDate>
-    <lastBuildDate>Mon, 23 Jan 2017 10:26:00 +0900</lastBuildDate>
+    <pubDate>Mon, 23 Jan 2017 10:55:29 +0900</pubDate>
+    <lastBuildDate>Mon, 23 Jan 2017 10:55:29 +0900</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -35,7 +35,7 @@ TDD는 “업무 코드를 작성하기 전에 테스트 코드를 먼저 만드
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h4&gt; JUnit을 사용해 보면서 생긴 문제와 해결들 &lt;/h4&gt;
 
-&lt;p&gt;처음 JUnit을 사용해할 때, 계속 실행이 되지 않아서 오랜 시간을 투자했던 부분이다. ( 딱 3줄을 추가… 함으로써 문제는 해결되었다 )&lt;/p&gt;
+&lt;p&gt;처음 JUnit을 사용해할 때, 계속 실행이 되지 않아서 오랜 시간을 투자했던 부분이다. (딱 3줄을 추가… 함으로써 문제는 해결되었다)&lt;/p&gt;
 &lt;figure class=&quot;highlight&quot;&gt;
 	&lt;pre&gt;
 	&lt;span style=&quot;color:black&quot;&gt;1. &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;@Runwith&lt;/span&gt;&lt;span style=&quot;color:black&quot;&gt;(SpringJUnit4ClassRunner.class)&lt;/span&gt;
@@ -114,8 +114,8 @@ TDD는 “업무 코드를 작성하기 전에 테스트 코드를 먼저 만드
 열심히 해서 좋은 완성품이 나오길…☆&lt;/p&gt;
 </description>
         <pubDate>Sat, 21 Jan 2017 15:04:10 +0900</pubDate>
-        <link>http://localhost:4000/blog/diary/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/diary/</guid>
+        <link>http://localhost:4000/blog/2017.01.21.Sat.diary/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017.01.21.Sat.diary/</guid>
         
         <category>Diary</category>
         
@@ -146,8 +146,8 @@ TDD는 “업무 코드를 작성하기 전에 테스트 코드를 먼저 만드
 이건 이제 여기까지… ㅎ.ㅎ&lt;/p&gt;
 </description>
         <pubDate>Sat, 14 Jan 2017 16:33:30 +0900</pubDate>
-        <link>http://localhost:4000/blog/diary/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/diary/</guid>
+        <link>http://localhost:4000/blog/2017.01.14.Sat.diary/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2017.01.14.Sat.diary/</guid>
         
         <category>Diary</category>
         
