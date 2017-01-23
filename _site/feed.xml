@@ -5,8 +5,8 @@
     <description>This is Song' home.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 21 Jan 2017 19:35:57 +0900</pubDate>
-    <lastBuildDate>Sat, 21 Jan 2017 19:35:57 +0900</lastBuildDate>
+    <pubDate>Mon, 23 Jan 2017 10:17:47 +0900</pubDate>
+    <lastBuildDate>Mon, 23 Jan 2017 10:17:47 +0900</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -52,15 +52,15 @@ TDD는 “업무 코드를 작성하기 전에 테스트 코드를 먼저 만드
 
 &lt;p&gt;출처 : Spring docs&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&amp;lt;a href=”http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/test/context/web/WebAppConfiguration.html&amp;lt;/a&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/test/context/web/WebAppConfiguration.html&quot;&gt;http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/&lt;br /&gt;                                                           test/context/web/WebAppConfiguration.html&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;출처 : [배워서 남주자]&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&amp;lt;a href=”http://countryxide.tistory.com/17&amp;lt;/a&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://countryxide.tistory.com/17&quot;&gt;http://countryxide.tistory.com/17&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;출처 : NAVER CAFE &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&amp;lt;a href=”http://cafe.naver.com/buldon/4934&amp;lt;/a&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://cafe.naver.com/buldon/4934&quot;&gt;http://cafe.naver.com/buldon/4934&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 21 Jan 2017 17:04:10 +0900</pubDate>
         <link>http://localhost:4000/blog/test/</link>
