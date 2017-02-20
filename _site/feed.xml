@@ -5,9 +5,72 @@
     <description>This is Song' home.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 10 Feb 2017 19:52:54 +0900</pubDate>
-    <lastBuildDate>Fri, 10 Feb 2017 19:52:54 +0900</lastBuildDate>
+    <pubDate>Mon, 20 Feb 2017 22:16:00 +0900</pubDate>
+    <lastBuildDate>Mon, 20 Feb 2017 22:16:00 +0900</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>스프링 프로젝트</title>
+        <description>&lt;h2&gt; 자바 엔터프라이즈 플랫폼, 스프링 애플리케이션 &lt;/h2&gt;
+
+&lt;h4&gt; 클라이언트와 백엔드 시스템 &lt;/h4&gt;
+&lt;p&gt;스프링은 어떤 플랫폼에서도 사용될 수 있지만, 기본적으로는 자바 엔터프라이즈 플랫폼에 최적화되어 있다. 웹 브라우저, HTTP를 통해 접근하는 웹 클라이언트와 백엔드 시스템 DB를 사용하는 애플리케이션에 가장 적합하고, 가장 많이사용 되는 구조이다.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4&gt; 애플리케이션 서버 &lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;WAS : 웹 애플리케이션 서버. JavaEE의 대부분의 표준 기술을 지원하고 다양한 형태의
+                 모듈로 배포 가능&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;경량급 WAS &amp;amp; 서블릿/JSP 컨테이너 : 웹 모듈의 배포만 가능&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt; 스프링 애플리케이션의 배포 단위 &lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;독립 웹 모듈 &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;엔터프라이즈 애플리케이션 &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;백그라운드 서비스 모듈 &lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt; 빌드 툴과 라이브러리 관리 &lt;/h4&gt;
+&lt;p&gt;Maven의 자바의 대표적인 빌드 툴이다. Maven POM이 가진 독특한 특징 중 하나는 애플리케이션이 필요로 하는 의존 라이브러리를 선언해두기만 하면 원격 서버에서 이를 자동으로 다운로드 받아서 사용할 수 있게 해주는 것이다.&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4&gt; 애플리케이션 아키텍쳐 종류 &lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;계층형 아키텍처&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;애플리케이션 정보 아키텍처&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;오브젝트 중심 아키텍처 &lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt; 스프링이 지원하는 기술이란 &lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;해당 기술을 스프링의 DI 패턴을 따라 사용할 수 있다.&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;스프링의 서비스 추상화가 적용됐다.&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;스프링이 지지하는 프로그래밍 모델을 적용했다.&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;템플릿/콜백이 지원된다.&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;br /&gt;
+출처 : 토비의 스프링 3.1 vol.1 스프링의 이해와 원리 9장 - 이일민 지음&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://book.naver.com/bookdb/book_detail.nhn?bid=7006514&quot;&gt;토비의 스프링 3.1 vol.1&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 20 Feb 2017 21:04:10 +0900</pubDate>
+        <link>http://localhost:4000/blog/Spring-Ch.-9/</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/Spring-Ch.-9/</guid>
+        
+        <category>SPring</category>
+        
+        <category>back-end</category>
+        
+        
+        <category>Back-end</category>
+        
+      </item>
     
       <item>
         <title>MockMvc Test</title>
@@ -60,7 +123,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://nhnent.dooray.com/project/to/BaseCamp-4%EA%B8%B0-%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD/90?order=-createdAt&amp;amp;userWorkflowClass=all&quot;&gt;https://nhnent.dooray.com/project/to/BaseCamp-4%EA%B8%B0-%EA%B3%B5%EC%A7%80%EC%82%AC%ED%95%AD/90?order=-createdAt&amp;amp;userWorkflowClass=all&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sat, 21 Jan 2017 17:04:10 +0900</pubDate>
+        <pubDate>Fri, 10 Feb 2017 17:04:10 +0900</pubDate>
         <link>http://localhost:4000/blog/MockMvc/</link>
         <guid isPermaLink="true">http://localhost:4000/blog/MockMvc/</guid>
         
